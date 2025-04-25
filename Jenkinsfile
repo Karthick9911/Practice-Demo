@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    checkout scm: [$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Karthick9911/Practice-Demo.git']]]
+                    checkout scm: [$class: 'GitSCM', branches: [[name: '*/dev1']], userRemoteConfigs: [[url: 'https://github.com/Karthick9911/Practice-Demo.git']]]
                 }
             }
         }
