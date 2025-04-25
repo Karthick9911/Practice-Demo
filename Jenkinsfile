@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    checkout scm: [$class: 'GitSCM', branches: [[name: '*/dev']], userRemoteConfigs: [[url: 'https://github.com/Karthick9911/App-Deploy.git']]]
+                    checkout scm: [$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/Karthick9911/Practice-Demo.git']]]
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                     script {
                         sh "docker login -u karthick9911 -p $dockerhubpwd"
-                        sh 'docker push karthick9911/prod'
+                        sh 'docker push karthick9911/prod1'
                     }
                 }
         }
